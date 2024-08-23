@@ -100,7 +100,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: "Roboto", Arial, sans-serif;
+  font-family: "Varela Round", sans-serif;
   background-color: aliceblue;
 }
 
@@ -178,7 +178,7 @@ body {
   background: rgb(236, 239, 241);
   box-shadow: 0.625rem 0.625rem rgba(0, 0, 0, 0.2);
   border-radius: 6.25rem;
-  animation: cloudmove 3s linear infinite;
+  animation: cloud-movement 3s linear infinite;
 }
 
 .cloud:after,
@@ -205,33 +205,32 @@ body {
 }
 
 .cloud.two {
-  width: 6rem;
-  height: 2rem;
+  width: 8rem;
+  height: 3rem;
   margin-top: 5rem;
-  animation: cloudmove 3s 2s linear infinite;
 }
 
 .cloud.two::after {
-  width: 3rem;
-  height: 3rem;
+  width: 4.2rem;
+  height: 4.2rem;
   top: -1.3rem;
-  left: 0.5rem;
+  left: 0.2rem;
 }
 
 .cloud.two::before {
-  width: 2rem;
-  height: 2rem;
+  width: 3.2rem;
+  height: 3.2rem;
   top: -1.5rem;
-  left: 0.5rem;
+  left: 0.8rem;
 }
 
-@keyframes cloudmove {
+@keyframes cloud-movement {
   0% {
-    left: -100px;
+    left: -10%;
   }
 
   100% {
-    left: 300px;
+    left: 110%;
   }
 }
 
@@ -303,7 +302,7 @@ body {
   box-shadow: -1px -9px 25px 5px rgba(248, 252, 156, 1);
 }
 
-.weather div {
+.weather .sunny-day {
   width: 5rem;
   height: 5rem;
   background: rgb(255, 236, 60);
@@ -318,4 +317,21 @@ body {
   color: rgb(255, 236, 60);
   position: relative;
   bottom: 15%;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 600px) {
+  #container {
+    width: 100%; /* Full width on small screens */
+  }
+
+  body {
+    font-size: 0.9rem; /* Adjust font size for smaller screens */
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  #container {
+    width: 80%; /* Adjust width for medium screens */
+  }
 }
