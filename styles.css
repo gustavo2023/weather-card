@@ -1,0 +1,259 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* Custom styles */
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Roboto", Arial, sans-serif;
+  background-color: aliceblue;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 25rem;
+  margin: 2rem 0;
+  padding: 1rem 0;
+  border-radius: 1rem;
+  background: linear-gradient(90deg, rgb(124, 203, 255), rgb(171, 252, 255));
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 70vh;
+}
+
+.city {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 2rem;
+  margin-bottom: 0;
+}
+
+.temp {
+  font-size: 5rem;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+  position: relative;
+  bottom: 5%;
+}
+
+.sun {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  top: 45%;
+  z-index: 1;
+  margin-bottom: 5rem;
+}
+
+.core {
+  width: 10rem;
+  height: 10rem;
+  background: #ffe70a;
+  box-shadow: 0 0 2rem #f5dc00, 0 0 4rem #e0ca00, 0 0 6rem #ccb800;
+  border-radius: 50%;
+  animation: sunshine 2.5s infinite linear forwards;
+}
+
+@keyframes sunshine {
+  0% {
+    box-shadow: none;
+  }
+}
+
+.cloud {
+  width: 12rem;
+  height: 4rem;
+  position: relative;
+  top: 2.7rem;
+  z-index: 1;
+  background: #eceff1;
+  box-shadow: 0.625rem 0.625rem rgba(0, 0, 0, 0.2);
+  border-radius: 6.25rem;
+    animation: cloudmove 3s linear infinite;
+}
+
+.cloud:after, .cloud:before{
+    content:"";
+    position:relative;
+    display:inline-block;
+    background:inherit;
+    border-radius:inherit;
+}
+
+.cloud::after {
+    width: 6rem;
+    height: 6rem;
+    top: -2.2rem;
+    left: 1rem;
+}
+
+.cloud::before {
+    width: 4rem;
+    height: 4rem;
+    top: -3rem;
+    left: 1.3rem;
+}
+
+@keyframes cloudmove {
+  0% {
+    left: -100px;
+  }
+
+  100% {
+    left: 300px;
+  }
+}
+
+.beach {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50vh;
+  background: linear-gradient(
+    90deg,
+    rgb(111, 166, 255) 38%,
+    rgba(118, 228, 255, 1) 100%
+  );
+}
+
+.weather {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  position: relative;
+  top: 50%;
+  height: 50vh;
+  overflow: hidden;
+  background-color: #fafdb5;
+  border-radius: 50%;
+  box-shadow: -1px -9px 21px -1px rgba(248, 252, 156, 1);
+}
+
+.weather div {
+  width: 5rem;
+  height: 5rem;
+  background: #ffe70a;
+  border-radius: 50%;
+  position: relative;
+  bottom: 18%;
+}
+
+.weather-condition {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ffe70a;
+  position: relative;
+  bottom: 15%;
+}
