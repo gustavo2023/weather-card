@@ -10,7 +10,7 @@ Or you can go directly to the original article [here](https://dev.to/kokaneka/dy
 
 ## Screencapture
 
-![Weather card screencapture](.images/blog-preview-screencapture.png)
+![Weather card screencapture](./images/sreencapture-weather-card.png)
 
 ## Process
 
