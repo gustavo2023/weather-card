@@ -148,7 +148,7 @@ body {
   align-items: center;
   width: 100%;
   position: absolute;
-  top: 45%;
+  top: 50%;
   z-index: 1;
   margin-bottom: 5rem;
 }
@@ -156,8 +156,9 @@ body {
 .core {
   width: 10rem;
   height: 10rem;
-  background: #ffe70a;
-  box-shadow: 0 0 2rem #f5dc00, 0 0 4rem #e0ca00, 0 0 6rem #ccb800;
+  background: rgb(255, 231, 10);
+  box-shadow: 0 0 2rem rgb(245, 220, 0), 0 0 4rem rgb(224, 202, 0),
+    0 0 6rem rgb(204, 184, 0);
   border-radius: 50%;
   animation: sunshine 2.5s infinite linear forwards;
 }
@@ -172,9 +173,9 @@ body {
   width: 12rem;
   height: 4rem;
   position: relative;
-  top: 0.8rem;
+  top: 10%;
   z-index: 1000;
-  background: #eceff1;
+  background: rgb(236, 239, 241);
   box-shadow: 0.625rem 0.625rem rgba(0, 0, 0, 0.2);
   border-radius: 6.25rem;
   animation: cloudmove 3s linear infinite;
@@ -203,6 +204,27 @@ body {
   left: 1.3rem;
 }
 
+.cloud.two {
+  width: 6rem;
+  height: 2rem;
+  margin-top: 5rem;
+  animation: cloudmove 3s 2s linear infinite;
+}
+
+.cloud.two::after {
+  width: 3rem;
+  height: 3rem;
+  top: -1.3rem;
+  left: 0.5rem;
+}
+
+.cloud.two::before {
+  width: 2rem;
+  height: 2rem;
+  top: -1.5rem;
+  left: 0.5rem;
+}
+
 @keyframes cloudmove {
   0% {
     left: -100px;
@@ -227,9 +249,9 @@ body {
   height: 8rem;
   background: linear-gradient(
     45deg,
-    hsla(216, 96%, 56%, 1) 10%,
-    hsla(178, 64%, 65%, 1) 50%,
-    rgb(38, 214, 67) 100%
+    rgb(35, 121, 251) 10%,
+    rgb(109, 223, 219) 50%,
+    rgb(38, 214, 67) 70%
   );
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
   position: relative;
@@ -241,9 +263,9 @@ body {
   height: 8rem;
   background: linear-gradient(
     -45deg,
-    hsla(216, 96%, 56%, 1) 10%,
-    hsla(178, 64%, 65%, 1) 50%,
-    rgb(38, 214, 67) 100%
+    rgb(35, 121, 251) 10%,
+    rgb(109, 223, 219) 50%,
+    rgb(38, 214, 67) 70%
   );
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
   position: relative;
@@ -276,7 +298,7 @@ body {
   top: 50%;
   height: 50vh;
   overflow: hidden;
-  background-color: #fafdb5;
+  background-color: rgb(250, 253, 181);
   border-radius: 50%;
   box-shadow: -1px -9px 25px 5px rgba(248, 252, 156, 1);
 }
@@ -284,7 +306,7 @@ body {
 .weather div {
   width: 5rem;
   height: 5rem;
-  background: #ffe70a;
+  background: rgb(255, 236, 60);
   border-radius: 50%;
   position: relative;
   bottom: 18%;
@@ -293,7 +315,7 @@ body {
 .weather-condition {
   font-size: 2rem;
   font-weight: 700;
-  color: #ffe70a;
+  color: rgb(255, 236, 60);
   position: relative;
   bottom: 15%;
 }
