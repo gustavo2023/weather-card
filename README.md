@@ -6,7 +6,7 @@ Margarita Weather Card is a simple web application that displays the weather for
 
 This project was inspired by a repository that contains a variety of project suggestions. You can find the repository [here](https://github.com/Xtremilicious/projectlearn-project-based-learning).
 
-Or you can go directly to the original article [here](https://dev.to/kokaneka/dynamic-weather-app-using-just-css-cp2)
+Or you can go directly to the original article [here](https://dev.to/kokaneka/dynamic-weather-app-using-just-css-cp2).
 
 ## Screencapture
 
